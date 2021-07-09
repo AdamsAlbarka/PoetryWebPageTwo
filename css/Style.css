@@ -3,6 +3,10 @@
 
 
 html, body{
+    /* background: url('../assets/img/weedbg.jpg'); */
+    /* background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed; */
     margin: 0%;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -13,7 +17,7 @@ html, body{
     /*      Theme colors        */
     --text-gray: #3f4954;
     --text-light : #686666da;
-    --bg-color: #0f0f0f;
+    --bg-color: #000000;
     --white: #ffffff;
     --midnight: #104f55;
 
@@ -97,6 +101,10 @@ p{
     min-height: 10vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100 ;
 }
 
 .nav .nav-menu{    
@@ -129,6 +137,7 @@ p{
 .nav .nav-items{
     display: flex;
     margin: 0;
+ 
 }
 
 .nav .nav-items .nav-link{
@@ -136,7 +145,7 @@ p{
     font-size: 1.1rem;
     position: relative;
     font-family: var(--Abel);
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 .nav .nav-items .nav-link:hover{
@@ -172,51 +181,29 @@ p{
 
 /* ----------------- Main Content----------- */
 
-/* --------------- Site title ---------------- */
-main .site-title{
-    background: url('../assets/Background-image.png');
-    background-size: cover;
-    height: 110vh;
-    display: flex;
-    justify-content: center;
-}
-
-main .site-title .site-background{
-    padding-top: 10rem;
-    text-align: center;
-    color: var(--white);
-}
-
-main .site-title h1, h3{
-    margin: .3rem;
-}
-
-main .site-title .btn{
-    margin: 1.8rem;
-    background: var(--sky);
-}
-
-main .site-title .btn:hover{
-    background: transparent;
-    border: 1px solid var(--white);
-    color: var(--white);
-}
-
-/* --------x------ Site title --------x------- */
-
-/* --------------- Blog Carousel ------------ */
+/* --------------- Blog Card Carousel ------------ */
 
 main .blog{
     background: url('../assets/Abract01.png');
     background-repeat: no-repeat;
-    background-position: right;
+    background-size:cover;
+    background-attachment: fixed;
     height: 100vh;
     width: 100%;
-    background-size: 65%;
 }
 
 main .blog .blog-post{
     padding-top: 6rem;
+}
+
+main .blog-content{
+    border-radius: 5px;
+}
+
+main .blog-content > img{
+    border-radius: 5px 5px 0 0;
+    width:360px;
+    height:220px;
 }
 
 main .blog-post .blog-content{
@@ -236,6 +223,7 @@ main .blog-content .btn-blog{
     padding: .7rem 2rem;
     background: var(--sky);
     margin: .5rem;
+
 }
 
 main .blog-content span{
@@ -267,6 +255,7 @@ section .container .owl-nav{
 
 
 /* -------x------- Blog Carousel -----x------ */
+
 
 /* ---------------- Site Content ----------------*/
 
@@ -421,13 +410,86 @@ main .post-content .post-title a{
 /* -------x------- Sidebar -----------x----------- */
 
 /* ---------x------- Main Content -----x----- */
+/* ---------x------- Quotes Bar--------x ------ */
 
+/* ---------x------- Quotes Bar--------x ------ */
+.quote-wrapper{
+    background: url('../assets/img/bookpoetry1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    color:#000000;
+    text-align: center;
+    border-radius: 10px 10px;
+    padding: 4rem 1.5rem;
+    -webkit-box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0, 1);
+    -moz-box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 1);
+    box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 1);
+    width: 100%;
+    height: 30%;
+    margin-bottom: 20px;
+}
 
-/* ----------------- Footer --------------------- */
+.quote-wrapper h1{
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.quote-wrapper small{
+    font-weight: 700;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+.quote-wrapper blockquote{
+    padding: 1.4rem 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.quote-wrapper cite{
+    display: block;
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+#gen-quote-btn{
+    font-size: 1.1rem;
+    border: none;
+    background-color: #07e4e4; ;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    outline: 0;
+}
+
+#gen-quote-btn:hover{
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.67);
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.67);
+     box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.67);
+}
+/* 
+@media screen and (min-width:680px){
+    .quote-wrapper{
+        width: 600px; 
+    }
+} */
+
+/* ----------------- Footer --------------------- */ 
 
 footer.footer{
+    background: url('../assets/img/weedbg.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
     height: 100%;
-    background: var(--bg-color);
+    color: #ffffff;
+    /* background: var(--bg-color); */
     position: relative;
 }
 
@@ -442,7 +504,7 @@ footer.footer .container > div{
     padding: 3rem .9rem;
 }
 
-footer.footer .container h2{
+footer.footer .container h2 p{
     color: var(--white);
 }
 
@@ -579,3 +641,75 @@ footer.footer .move-up span:hover{
 }
 
 /*        x      Viewport less then or equal to 520px       x     */
+
+/* Slideshow container */
+.slideshow-container {
+  height:80% ;
+  background-size: cover;
+  /* max-width: 100%; */
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text,.quote-wrapper blockquote {font-size: 11px}
+
+}
